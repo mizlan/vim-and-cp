@@ -1,0 +1,7 @@
+{
+	"suggest.enablePreselect": true,
+	"suggest.noselect": false,
+	"python.jediEnabled": false,
+	"clangd.path": "/usr/bin/clangd",
+	"diagnostic.displayByAle": true
+}
