@@ -14,6 +14,13 @@ Using a file as input, for example `input.txt`
 :CompileAndRunWithFile "input.txt"
 ```
 
+To compile and run separately, you can use the following command definitions:
+
+```vim
+command! -nargs=0 Compile call TermWrapper(printf('g++ -std=c++11 %s', expand('%')))
+command! -nargs=0 Run call TermWrapper('./a.out')
+```
+
 These commands can be mapped to keys of your choice, for example:
 
 ```vim
