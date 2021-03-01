@@ -28,6 +28,7 @@ function! TermWrapper(command) abort
 	endif
 	exec buffercmd
 	exec 'term ' . a:command
+	exec 'setlocal nornu nonu'
 	exec 'startinsert'
 endfunction
 
