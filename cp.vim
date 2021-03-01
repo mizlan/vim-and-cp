@@ -26,6 +26,7 @@ function! TermWrapper(command) abort
 	if exists('g:split_term_resize_cmd')
 		exec g:split_term_resize_cmd
 	endif
+	exec buffercmd
 	exec 'term ' . a:command
 	exec 'startinsert'
 endfunction
