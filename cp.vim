@@ -30,6 +30,7 @@ function! TermWrapper(command) abort
 	exec 'term ' . a:command
 	exec 'setlocal nornu nonu'
 	exec 'startinsert'
+	autocmd BufEnter <buffer> startinsert
 endfunction
 
 command! -nargs=0 CompileAndRun call TermWrapper(printf('g++ -std=c++11 %s && ./a.out', expand('%')))
