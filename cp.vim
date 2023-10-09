@@ -10,6 +10,13 @@ endif
 " important option that should already be set!
 set hidden
 
+" Go into insert mode when clicking in a terminal in a pane
+if has('nvim')
+    augroup terminal_setup | au!
+        autocmd TermOpen * nnoremap <buffer><LeftRelease> <LeftRelease>i
+    augroup end
+endif
+
 " available options:
 " * g:split_term_style
 " * g:split_term_resize_cmd
